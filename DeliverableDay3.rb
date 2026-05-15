@@ -38,5 +38,6 @@ begin
         p sum
         puts""
     when "0"
+        break
     end
 end while con == true

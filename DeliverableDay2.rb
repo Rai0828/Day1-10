@@ -76,5 +76,7 @@ begin
         puts "Balance #{balance}"
         puts""
         end
+    when "0"
+        break
     end
 end while con == true
