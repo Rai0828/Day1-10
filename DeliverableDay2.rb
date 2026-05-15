@@ -37,22 +37,44 @@ begin
         if name.empty? && age == 0
             puts "Please register first"
             puts""
-        elsif !name.empty? && age >= 18
+        elsif !name.empty? && age != 0
          if balance == 0
             puts "You don't have balance, please deposit first"
             puts ""
+         else
+            print "Enter Amount: "
+            inputB = gets.chomp.to_f
+            if inputB > balance
+                puts "Insufficient balance"
+            elsif inputB <= balance
+                balance = balance - inputB
+                 puts "Your balance is #{balance}"
+            end
          end
             
         end
        
     when "3"
-        print "Enter Amount: "
+        if name.empty? && age == 0
+            puts "Please register first"
+            puts""
+        elsif !name.empty? && age != 0
+            print "Enter Amount: "
+            puts ""
         inputA = gets.chomp.to_f
-        balance = inputA + balance
+        balance = balance +inputA 
         puts "Your balance is #{balance}"
         puts""
-    when "1"
+        end
+        
+    when "4"
+        if name.empty? && age == 0
+            puts "Please register first"
+            puts""
+        elsif !name.empty? && age != 0
+               puts""
         puts "Balance #{balance}"
         puts""
+        end
     end
 end while con == true
