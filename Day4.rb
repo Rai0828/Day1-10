@@ -67,3 +67,43 @@ person3 = Person3.new("ghenie")
 puts person3.name
 person3 = Person3.new("wifeyy")
 puts person3.name
+
+
+
+#Inheritance
+class Animal
+    def noice
+        puts "meow meow"
+    end
+end
+
+
+class Cat < Animal
+end
+
+cat= Cat.new
+
+cat.noice
+
+
+
+#inheritance override
+ class Pig < Animal
+    def noice
+        puts "oink"
+    end
+ end
+  pig = Pig.new
+  pig.noice
+
+#inheritance super
+class Goat < Animal 
+    def noice
+        super
+        puts "meheee"
+    end
+end
+
+goat = Goat.new
+
+goat.noice
